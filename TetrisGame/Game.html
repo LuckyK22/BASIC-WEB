@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #scoreboard{
+            color: red;
+            font-weight: 900;
+            font-size: 50px;
+        }
+        .rotate{
+            position: absolute;
+            top: 100px;
+            height: 500px;
+            width: 300px;
+        }
+        #anchor{
+            height: 250px;
+    width: 288px;
+        }
+
+        .left{
+            position: absolute;
+            top: 40px;
+            left: 10px;
+            height: 50px;
+    width: 88px;
+        }
+        .right{
+            position: absolute;
+            top: 40px;
+            left: 166px;
+            height: 50px;
+    width: 88px;
+        }
+
+        .blank{
+            content: " ";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 117px;
+    left: 74px;
+    background: white;
+        }
+
+        .blankone{
+            content: " ";
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            top: 125px;
+    left: 209px;
+    background: white;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="container">
+        <canvas
+        id = "game-canvas"
+        width="350" 
+        height="600"
+        ></canvas>
+        <h2 id = "scoreboard">Score: 0</h2>
+    </div>
+<div class="rotate">
+        <img id="anchor" src="frog.jpg" alt="Frog" >
+        <div id="eyes">
+        <img class = "eye left" src="eye.png" alt="eye" srcset="">
+        <img class = "eye right"  src="eye.png" alt="eye" srcset="">
+        <div class="blank"></div>
+        <div class="blankone"></div>
+</div>
+</div>
+        <script src="infex.js"></script>
+        <script src="./constants.js"></script>
+        <script src="./piece.js"></script>
+        <script src="./gamemodel.js"></script>
+        <script src="./tetris.js"></script>
+    </body>
+</html>
